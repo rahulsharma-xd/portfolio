@@ -21,6 +21,7 @@
 /* HERO */
 .hero {
   position: relative;
+  text-align: center;
 }
 
 .hero .base,
@@ -95,6 +96,8 @@
   display: flex;
   gap: 8px;
   margin: 32px 0 0;
+  flex-wrap: wrap; /* FIX */
+  justify-content: center; /* FIX */
 }
 
 #next-steps ul .logo {
@@ -151,4 +154,58 @@
 .ticks::after {
   right: 0;
   border-right-color: var(--border);
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* HERO FIX */
+  .hero .framework,
+  .hero .vite {
+    display: none;
+  }
+
+  .hero .base {
+    width: 120px;
+  }
+
+  /* CENTER */
+  #center {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  /* NEXT STEPS STACK */
+  #next-steps {
+    flex-direction: column;
+  }
+
+  #next-steps > div {
+    padding: 20px;
+  }
+
+  #docs {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* TEXT */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  /* COUNTER */
+  .counter {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  /* SPACING */
+  #spacer {
+    height: 50px;
+  }
 }
